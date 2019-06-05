@@ -1,0 +1,25 @@
+<!--<section class="content-wrapper">
+        <router-outlet></router-outlet>
+</section>-->
+<div class="jumbotron chatcontainer">
+        <div class="display-4">
+                {{title}}
+        </div>
+        <div *ngIf="!username">
+                <form (submit)="addUser()">
+                        <input type="text" name="message" [(ngModel)]="user" class="textbox">
+                        <button type="submit" class="btn btn-primary btn-md">Join</button>
+                </form>
+        </div>
+        <div *ngIf="username" class="chatarea">
+                <div class="scrollarea" id="scrollDiv">
+                        <div *ngFor="let chat of chats; let i = index" class="chat" [class.notify]="chat.type === 'notify'" [class.me]="chat.user === username"><span class="chatspan">{{chat.msg}}</span></div>
+                </div>
+        </div>
+        <div *ngIf="username" class="inputarea">
+                <form (submit)="addChat()">
+                        <input type="text" name="message" [(ngModel)]="message" class="textbox">
+                        <button type="submit" class="btn btn-primary btn-md">Send</button>
+                </form>
+        </div>
+</div>

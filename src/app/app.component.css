@@ -1,0 +1,42 @@
+
+.chatcontainer {
+    max-width: 350px;
+}
+
+.chatarea {
+    min-height: 300px;
+}
+
+.scrollarea {
+    max-height: 300px;
+    overflow-y: auto
+}
+
+.chat {
+    text-align: left;
+    padding: 4px;
+    margin-top: 4px;
+    display: block;
+}
+
+.chat.me {
+    text-align: right;
+}
+
+.chatspan {
+    background: lightskyblue;
+    border: 1px solid #adb5bd;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.chat.me .chatspan{
+    background: white;
+}
+
+.chat.notify .chatspan{
+    border: 0;
+    background: transparent;
+    color: grey;
+    float: right;
+}
